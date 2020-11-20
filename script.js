@@ -3,49 +3,46 @@ let choose = ['Rock', 'Paper', 'Scissors'];
 let computerScore = 0;
 let playerScore = 0;
 
-let playerChoice = '';
-let computerChoice = '';
 
 
 function computerChoose() {
     let choice = Math.round(Math.random() * 2)
-    console.log(choice);
     returnMe = choose[choice];
-    computerChoice = returnMe.toLowerCase();
-    return;
+    return returnMe.toLowerCase();
 }
-//Function saves rock, paper, or scissors at random.
+//Function returns rock, paper, or scissors at random.
 
 function playerChoose() {
     let choice = prompt('Type "Rock", "Paper", or "Scissors"');
-    playerChoice = choice.toLowerCase();
-    return 
+    return choice.toLowerCase();
 }
-//Function saves rock, paper, or scissors at player prompt.
+//Function returns rock, paper, or scissors at player prompt.
 
-function compareChoice() {
+function oneRound(player, computer) {
+    returnable(p, c, w) {
+        returnMe = `Player throws: ${p}Computer throws: ${c}${w} wins.`
+    }
     if (
-        playerChoice=='rock' && computerChoice=='scissors' ||
-        playerChoice=='paper' && computerChoice=='rock' ||
-        playerChoice=='scissors' && computerChoice=='paper'
+        player=='rock' && computer=='scissors' ||
+        player=='paper' && computer=='rock' ||
+        player=='scissors' && computer=='paper'
     ) {
-        return 'player'
+        return returnMe(player, computer, 'Player')
     } else if (
-        playerChoice=='rock' && computerChoice=='paper' ||
-        playerChoice=='paper' && computerChoice=='scissors' ||
-        playerChoice=='scissors' && computerChoice=='rock'
+        player=='rock' && computer=='paper' ||
+        player=='paper' && computer=='scissors' ||
+        player=='scissors' && computer=='rock'
     ) {
-        return 'computer'
+        return 'computer wins'
     } else if (
-        playerChoice==computerChoice
+        player==computer
     ) {
-        return 'draw'
+        return 'draw - nobody wins'
     } else {
-        return 'error'
+        return 'error. I am going to puke.'
     }
 }
 //Function returns player, computer, or draw: winner of the round.
 
-
-
+console.log(oneRound(playerChoose(), computerChoose()));
 

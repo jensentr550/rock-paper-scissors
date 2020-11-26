@@ -1,0 +1,47 @@
+img {
+    width: 200px;
+    height: auto;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+
+#prl, #crl {
+    width: 200px;
+    height: 180px;
+}
+#crc, #crr, #prc, #prr {
+    width: 200px;
+    height: 180px;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+}
+
+.status-ribbon {
+    background-color: burlywood;
+    display: flex;
+    flex-direction: row;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+#gui-content {
+    background-color: orchid;
+    display: flex;
+    flex-direction: row;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-top: black;
+}
+
+#choice-buttons {
+    margin-top: 33px;
+}
+
